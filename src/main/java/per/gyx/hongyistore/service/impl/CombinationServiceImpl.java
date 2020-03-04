@@ -9,6 +9,6 @@ import java.util.List;
 
 public class CombinationServiceImpl implements Combination {
     public static List<Good> combinate(List<? extends Good> goods,List<Image> images){
-
+        return null;
     }
 }

@@ -1,6 +1,5 @@
 package per.gyx.hongyistore.service.impl;
 
-import javafx.scene.control.Skin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import per.gyx.hongyistore.dao.SkinCareDao;
