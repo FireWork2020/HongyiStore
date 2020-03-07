@@ -2,6 +2,7 @@ package per.gyx.hongyistore.entity;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Menu {
@@ -14,6 +15,9 @@ public class Menu {
     private List<Menu> children;
 
     public List<Menu> getChildren() {
+        if(children == null){
+            children = new ArrayList<>();
+        }
         return children;
     }
 

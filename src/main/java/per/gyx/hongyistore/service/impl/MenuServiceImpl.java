@@ -23,7 +23,6 @@ public class MenuServiceImpl implements MenuService {
             for(Menu child:childMenus){
                 if(child.getParentId() == id){
                     item.getChildren().add(child);
-                    childMenus.remove(child);
                 }
             }
         }

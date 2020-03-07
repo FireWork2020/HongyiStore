@@ -8,11 +8,11 @@
         <result property="parentId" column="parentId"/>
     </resultMap>
     <select id="getParentMenus" resultMap="Menu">
-        select url,path,name,parentId,isParent from  menu
+        select id,url,path,name,parentId,isParent from  menu
         where isParent = 1
     </select>
     <select id="getChildMenus" resultMap="Menu">
-        select url,path,name,parentId,isParent from  menu
+        select id,url,path,name,parentId,isParent from  menu
         where isParent = 0
     </select>
 </mapper>
