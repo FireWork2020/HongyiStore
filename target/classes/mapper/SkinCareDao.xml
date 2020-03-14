@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="per.gyx.hongyistore.dao.SkinCareDao">
+    <resultMap id="SkinCareResult" type="per.gyx.hongyistore.entity.SkinCare">
+        <result property="goodID" column="goodID"/>
+        <result property="goodName" column="goodName"/>
+        <result property="kind" column="kind"/>
+        <result property="description" column="description"/>
+        <result property="price" column="price"/>
+        <result property="soldNum" column="soldNum"/>
+    </resultMap>
+    <select id="getSkinCare" resultMap="SkinCareResult">
+        select goodID,goodName,kind,description,price,soldNum from  SkinCare
+        order by soldNum desc
+    </select>
+    <select id="getRecommendSkinCare" resultMap="SkinCareResult">
+        select goodID,goodName,kind,description,price,soldNum from  SkinCare
+        order by soldNum desc
+        where isRecommendOrLike=1
+    </select>
+    <select id="getLikeSkinCare" resultMap="SkinCareResult">
+        select goodID,goodName,kind,description,price,minSize,maxSize,soldNum from  clothe
+        order by soldNum desc
+        where isRecommendOrLike=2
+    </select>
+</mapper>

@@ -7,12 +7,19 @@ import java.util.List;
 
 public class Menu {
     private int id;
-    private String url;
-    private String path;
+    private String imgName;
     private String name;
     private int parentId;
     private Boolean isParent;
     private List<Menu> children;
+
+    public String getImgName() {
+        return imgName;
+    }
+
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
+    }
 
     public List<Menu> getChildren() {
         if(children == null){
@@ -39,21 +46,6 @@ public class Menu {
 
     public void setId(int id) {
         this.id = id;
-    }
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
     }
 
     public String getName() {
